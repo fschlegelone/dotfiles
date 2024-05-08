@@ -1,0 +1,12 @@
+0 verbose cli /opt/homebrew/Cellar/node/22.1.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@10.7.0
+2 info using node@v22.1.0
+3 silly config:load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config:load:file:/Users/fschlegelone/.npmrc
+5 silly config:load:file:/opt/homebrew/etc/npmrc
+6 verbose title npm root
+7 verbose argv "--loglevel" "silent" "root" "--global"
+8 verbose logfile logs-max:10 dir:/Users/fschlegelone/.npm/_logs/2024-05-07T07_31_13_006Z-
+9 verbose logfile /Users/fschlegelone/.npm/_logs/2024-05-07T07_31_13_006Z-debug-0.log
+10 verbose exit 0
+11 info ok
