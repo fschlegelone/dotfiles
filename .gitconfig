@@ -1,0 +1,9 @@
+[user]
+	name = fschlegelone
+	email = fabian@schlegel.one
+
+[init]
+	defaultBranch = main
+[push]
+	default = simple
+	autoSetupRemote = true
