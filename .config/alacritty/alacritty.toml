@@ -1,0 +1,24 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+[shell]
+program = "/opt/homebrew/bin/zsh"
+args = ["-l"]
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Buttonless"
+opacity = 0.8
+blur = true
+option_as_alt = "OnlyRight"
+startup_mode = "Windowed"
+
+title = "TERMINAL"
+
+[font]
+normal.family = "CaskaydiaCove Nerd Font Mono"
+size = 16
