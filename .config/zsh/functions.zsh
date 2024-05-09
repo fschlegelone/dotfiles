@@ -15,6 +15,8 @@ alias py="python"
 alias po="poetry"
 alias lg="lazygit"
 alias pn="pnpm"
+alias todo='nvim +"Telekasten goto_today"'
+
 
 #-- DROP IN REPLACEMENTS --#
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
@@ -29,6 +31,12 @@ alias pip3="pip"
 chinfo() {
   echo -e "${C_GREEN}$1${C_RESET}"
   echo -e "permissions: $(stat -c '%a' "$1")\nownership: $(stat -c '%U:%G' "$1")"
+}
+
+ppath() {
+  printf "${G_BORDER}${C_CYAN}            INCLUDED IN PATH${G_BORDER}"
+  IFS=':' read -r -d '' path_array <<< "$PATH:"
+  printf "${I_INFO} %s \n" "${(ps/:/)path_array}"
 }
 
 # update homebrew

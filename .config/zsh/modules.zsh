@@ -1,8 +1,7 @@
-#-- HOMEBREW --#
-# initialize homebrew environment 
+# -- HOMEBREW -- #
+# initialize brew environment 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# homebrew completions
+# brew completions
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -10,8 +9,7 @@ then
   autoload -Uz compinit
   compinit
 fi
-
-# homebrew options
+# brew options
 export CFG_BREW="$XDG_CONFIG_HOME/homebrew"
 export HOMEBREW_ENV="$XDG_CONFIG_HOME/homebrew/brew.env"
 export HOMEBREW_API_AUTO_UPDATE_SECS=86400
@@ -21,12 +19,9 @@ export HOMEBREW_BAT="$SHELLY/bat"  # Example path, change as needed
 export HOMEBREW_CASK_OPTS="--fontdir"
 export HOMEBREW_DISPLAY=1
 export HOMEBREW_NO_ENV_HINTS=1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
-#-- BINUTILS --#
-export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
-
-#-- SKHD --#
+# -- SKHD -- #
 if pgrep -f skhd >/dev/null; then
     echo "skhd service is running"
 else
@@ -34,7 +29,7 @@ else
     echo "started skhd service"
 fi
 
-#-- YABAI --#
+# -- YABAI -- #
 if pgrep -f yabai >/dev/null; then
     echo "yabai service is running"
 else
@@ -42,39 +37,37 @@ else
     echo "started yabai service"
 fi
 
-#-- AZURE-CLI --#
+# -- AZURE-CLI -- #
 autoload bashcompinit && bashcompinit
 source "$(brew --prefix)/etc/bash_completion.d/az"
 
-#-- NODE --#
-# set pnpm home
+# -- NODE -- #
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;; # set pnpm home
 esac
 
-#-- FZF --# 
+# -- FZF -- # 
 eval "$(fzf --zsh)"
 
-#-- ZOXIDE --#
+# -- ZOXIDE -- #
 eval "$(zoxide init zsh)"
 
-#-- ZSH-AUTOSUGGESTIONS --#
+# -- ZSH-AUTOSUGGESTIONS -- #
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#-- ZSH-SYNTAX-HIGHLIGHTING --#
+# -- ZSH-SYNTAX-HIGHLIGHTING -- #
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#-- ZSH-COMPLETIONS --#
+# -- ZSH-COMPLETIONS -- #
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
     autoload -Uz compinit
     compinit
   fi
 
-#-- STARSHIP --#
+# -- STARSHIP -- #
 eval "$(starship init zsh)"
 
-#-- PYENV --#
-# place at the end
-if command -v pyenv 1>/dev/null 2>&1; then
+# -- PYENV -- #
+if command -v pyenv 1>/dev/null 2>&1; then # (important!): source last
   eval "$(pyenv init -)"
 fi

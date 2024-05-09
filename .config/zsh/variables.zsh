@@ -1,12 +1,12 @@
 # TERMINAL COLOR CODES
-export C_BLACK='\033[0;30m'
-export C_RED='\033[0;31m'
-export C_GREEN='\033[0;32m'
-export C_YELLOW='\033[0;33m'
-export C_BLUE='\033[0;34m'
-export C_PURPLE='\033[0;35m'
-export C_CYAN='\033[0;36m'
-export C_WHITE='\033[0;37m'
+export C_BLACK='\033[1;30m'
+export C_RED='\033[1;31m'
+export C_GREEN='\033[1;32m'
+export C_YELLOW='\033[1;33m'
+export C_BLUE='\033[1;34m'
+export C_PURPLE='\033[1;35m'
+export C_CYAN='\033[1;36m'
+export C_WHITE='\033[1;37m'
 export C_TEXT='\033[1;34m'
 export C_RESET='\033[0m'
 # HEX COLOR CODES
@@ -34,13 +34,20 @@ export C_SURFACE0_HEX="#313244"
 export C_BASE_HEX="#1e1e2e"
 export C_MANTLE_HEX="#181825"
 export C_BASE_HEX="#11111b"
+# GLYPHS
+export G_BORDER="\n${C_BLACK}󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜󰇜${C_RESET} \n"
+export G_WHITESPACE=" " # empty character (not equal to space_key)
+export G_STAR="󱝂"
+export G_SHELL=""
+export G_BASH=""
+export G_LINUX=""
 
 # STATUS PROMPTS
 I_SUCCESS="${RESET}[ ${C_GREEN}SUCCESS${C_RESET} ]" 
 I_ERROR="${RESET}[ ${C_RED}ERROR${C_RESET} ]"
 I_SKIP="${RESET}[ ${C_CYAN}SKIPPED${C_RESET} ]"
 I_PROCESSING="${RESET}[ ${C_CYAN}PROCESSING ..${C_RESET} ]"
-I_ACTION="${C_RESET}[ ${C_PINK}ACTION REQUIRED${C_RESET} ]"
-I_ASK="${C_RESET}[ ${C_YELLOW}???${C_RESET} ]"
+I_MANUALLY="${C_RESET}[ ${C_YELLOW}MANUALLY${C_RESET} ]"
+I_ASK="${C_RESET}[ ${C_BLUE}???${C_RESET} ]"
 I_ASK_YN="${C_RESET}[ ${C_BLUE}y/n${C_RESET} ]"
 I_INFO="${C_RESET}[ ${C_PURPLE}INFO${C_RESET} ]"
