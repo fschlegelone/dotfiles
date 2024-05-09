@@ -6,7 +6,7 @@
 5 silly config:load:file:/opt/homebrew/etc/npmrc
 6 verbose title npm root
 7 verbose argv "--loglevel" "silent" "root" "--global"
-8 verbose logfile logs-max:10 dir:/Users/fschlegelone/.npm/_logs/2024-05-07T07_34_01_626Z-
-9 verbose logfile /Users/fschlegelone/.npm/_logs/2024-05-07T07_34_01_626Z-debug-0.log
+8 verbose logfile logs-max:10 dir:/Users/fschlegelone/.npm/_logs/2024-05-09T13_13_17_551Z-
+9 verbose logfile /Users/fschlegelone/.npm/_logs/2024-05-09T13_13_17_551Z-debug-0.log
 10 verbose exit 0
 11 info ok

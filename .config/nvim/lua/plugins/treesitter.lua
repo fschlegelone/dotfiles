@@ -1,20 +1,36 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPre", "BufNewFile" }, -- lazy load when entering new or opened buffers 
   build = ":TSUpdate",
-  init = function()
-    print('Treesitter loaded')
-  end,
+  dependencies = {
+    "windwp/nvim-ts-autotag",
+  },
   config = function() 
-    local ts_config = require('nvim-treesitter.configs')
-    ts_config.setup {
+    local treesitter = require('nvim-treesitter.configs')
+    treesitter.setup {
+      -- syntax highlighting
+      highlight = {
+        enable = true,
+      },
+      -- indenting
+      indent = { 
+        enable = true,
+      },
+      -- autotagging
+      autotag = {
+        enable = true,
+      },
       ensure_installed = {
-        "bash", "c", "c_sharp", "cpp", "comment", "css", "csv", "dockerfile", "gitignore", "gpg", "graphql", "html", "http", "java", "javascript", "json", "lua", "markdown", "markdown_inline", "prisma", "properties", "python", "rust", "sql", "ssh_config", "terraform", "toml", "tsx", "typescript", "xml", "yaml"
+        "vim", "vimdoc", "bash", "c", "c_sharp", "cpp", "comment", "css", "csv", "dockerfile", "gitignore", "gpg", "graphql", "html", "http", "java", "javascript", "json", "lua", "markdown", "markdown_inline", "prisma", "properties", "python", "regex", "rust", "sql", "svelte", "ssh_config", "terraform", "toml", "tsx", "typescript", "xml", "yaml"
       },
-        highlight = {
+      incremental_selection = {
         enable = true,
-      },
-      indent = {
-        enable = true,
+        keymaps = {
+          init_selection = "<C-space>",
+          node_incremental = "<C-space>",
+          scope_incremental = false,
+          node_decremental = "<bs>", 
+        },
       },
     }
   end

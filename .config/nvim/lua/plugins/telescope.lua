@@ -9,11 +9,13 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
 		"BurntSushi/ripgrep",
-    "MunifTanjim/nui.nvim"
+    "MunifTanjim/nui.nvim",
+    "nvim-telescope/telescope-ui-select.nvim"
 	},
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+    local themes = require("telescope.themes")
 
 		telescope.setup({
 			defaults = {
@@ -35,9 +37,15 @@ return {
           override_file_sorter = true,
           case_mode = "smart_case",
         },
+        ["ui-select"] = {
+          themes.get_dropdown {
+            -- opts
+          }
+        }
       },
 		})
 
     telescope.load_extension("fzf") -- load fzf extension
+    telescope.load_extension("ui-select") -- load ui-select extension
 	end,
 }

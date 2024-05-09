@@ -6,11 +6,11 @@
 5 silly config:load:file:/opt/homebrew/etc/npmrc
 6 verbose title npm info neovim
 7 verbose argv "info" "neovim" "--json"
-8 verbose logfile logs-max:10 dir:/Users/fschlegelone/.npm/_logs/2024-05-07T07_34_32_084Z-
-9 verbose logfile /Users/fschlegelone/.npm/_logs/2024-05-07T07_34_32_084Z-debug-0.log
-10 silly logfile start cleaning logs, removing 5 files
+8 verbose logfile logs-max:10 dir:/Users/fschlegelone/.npm/_logs/2024-05-09T13_13_17_826Z-
+9 verbose logfile /Users/fschlegelone/.npm/_logs/2024-05-09T13_13_17_826Z-debug-0.log
+10 silly logfile start cleaning logs, removing 3 files
 11 silly logfile done cleaning log files
-12 http fetch GET 200 https://registry.npmjs.org/neovim 200ms (cache revalidated)
+12 http fetch GET 200 https://registry.npmjs.org/neovim 198ms (cache revalidated)
 13 silly view {
 13 silly view   '5.1.0': {
 13 silly view     _id: 'neovim@5.1.0',
