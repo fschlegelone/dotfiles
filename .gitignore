@@ -1,4 +1,6 @@
 .ssh
+.npm
 .git
+.azure
+.azure-functions-core-tools
 .DS_Store
-.config/github-copilot

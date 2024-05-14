@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 local nv_keymap = vim.api.nvim_set_keymap
 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 keymap("n", "<leader>%", "<cmd> source % <CR>", { desc = "Reload config" }) -- reload config
 
 keymap("n", "<leader>/", "<cmd>nohl<CR>", { desc = "Cancel find & replace" }) -- cancel find & replace
@@ -29,11 +29,11 @@ keymap("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -
 keymap("n", "<leader>tl", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap("n", "<leader>th", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- PLUGIN KEYMAPS
 
--- telescope 
+-- telescope
 local builtin = require("telescope.builtin")
 keymap("n", "<leader>ff", builtin.find_files, { desc = "Telescope: Fuzzy find files in cwd" })
 keymap("n", "<leader>fg", builtin.live_grep, { desc = "Telescope: Find string in cwd" })
@@ -42,11 +42,21 @@ keymap("n", "<leader>fh", builtin.help_tags, { desc = "Telescope: Find help tags
 keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope: Fuzzy find recent files" })
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Telescope: Find string under cursor in cwd" })
 -- spectre (find + replace)
-keymap('n', '<leader>rr', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
-keymap('n', '<leader>rw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
-keymap('v', '<leader>rw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
-keymap('n', '<leader>rf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
--- telekasten (notes) 
+keymap("n", "<leader>rr", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
+keymap(
+  "n",
+  "<leader>rw",
+  '<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+  { desc = "Search current word" }
+)
+keymap("v", "<leader>rw", '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
+keymap(
+  "n",
+  "<leader>rf",
+  '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+  { desc = "Search on current file" }
+)
+-- telekasten (notes)
 keymap("n", "<leader>z", "<cmd>Telekasten panel<CR>", { desc = "Telekasten: open panel" })
 keymap("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", { desc = "Telekasten: new note" })
 keymap("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", { desc = "Telekasten: find notes" })
@@ -58,3 +68,7 @@ keymap({ "n", "v" }, "<leader>zi", "<cmd>Telekasten insert_img_link<CR>", { desc
 keymap({ "n", "v" }, "<leader>zl", "<cmd>Telekasten follow_link<CR>", { desc = "Telekasten: follow link" })
 
 -- keymap("i", "[[", "<cmd>Telekasten insert_link<CR>", { desc = "Telekasten: automatically insert link when typing [[")
+
+-- Remap ? for forward search
+nv_keymap("n", "?", "/", { desc = "Search inside of file" })
+nv_keymap("v", "?", "/", { desc = "Search inside of file" })

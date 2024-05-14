@@ -1,6 +1,4 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -20,5 +18,8 @@ startup_mode = "Windowed"
 title = "TERMINAL"
 
 [font]
-normal.family = "CaskaydiaCove Nerd Font Mono"
-size = 16
+normal = { family = "IosevkaTerm Nerd Font Mono", style = "Bold" }
+size = 18
+
+[keyboard]
+bindings = []

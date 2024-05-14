@@ -21,7 +21,7 @@ return {
         enable = true,
       },
       ensure_installed = {
-        "vim", "vimdoc", "bash", "c", "c_sharp", "cpp", "comment", "css", "csv", "dockerfile", "gitignore", "gpg", "graphql", "html", "http", "java", "javascript", "json", "lua", "markdown", "markdown_inline", "prisma", "properties", "python", "regex", "rust", "sql", "svelte", "ssh_config", "terraform", "toml", "tsx", "typescript", "xml", "yaml"
+        "vim", "vimdoc", "bash", "comment", "css", "csv", "dockerfile", "gitignore", "gpg", "graphql", "html", "http", "java", "javascript", "json", "lua", "markdown", "markdown_inline", "prisma", "properties", "python", "regex", "rust", "sql", "svelte", "ssh_config", "terraform", "toml", "tsx", "typescript", "xml", "yaml"
       },
       incremental_selection = {
         enable = true,
