@@ -22,6 +22,7 @@ export NOTES_ROOT="$NAS/notes" # TODO: remove, if not needed by nvim notes
 export SHELL_DIR="$XDG_CONFIG_HOME/shell"
 export ENCRYPTED_DIR="$XDG_CONFIG_HOME/encrypted" # can be pushed to git
 export CRITICAL_DIR="$XDG_CONFIG_HOME/critical" # !NEVER! push to git TODO: function that forbids pushing CRITICAL_DIR to git
+export APPSUP="$HOME/Library/Application Support"
 
 # -- COMPILER (C) -- #
 export LDFLAGS="-L/opt/homebrew/opt/binutils/lib" # binutils

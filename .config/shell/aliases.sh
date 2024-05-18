@@ -20,9 +20,12 @@ alias nt='nvim +"Telekasten panel"'
 alias ff="fastfetch"
 alias fz="fzf"
 alias ct="bat"
+alias xc="pbcopy"
+alias xp="pbpaste"
 # -- DROP IN REPLACEMENTS -- #
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias cd="z"
+alias cdi="zi"
 alias python3="python"
 alias pip3="pip"
 alias ssh="ssh -A"

@@ -1,6 +1,7 @@
 .ssh
 .npm
 .git
+.pyenv
 .azure
 .azure-functions-core-tools
 .DS_Store
