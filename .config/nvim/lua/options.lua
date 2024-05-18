@@ -30,6 +30,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+vim.highlight.on_yank = true -- highlight yanked text
 
 -- splits
 opt.splitright = true -- split vertical window to the right
@@ -38,3 +39,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- disable some providers
 vim.g.loaded_ruby_provider = 0 -- disable ruby provider
 vim.g.loaded_perl_provider = 0 -- disable perl provider
+
+-- mouse

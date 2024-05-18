@@ -30,3 +30,11 @@ cmd + ctrl - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 # flip layout
 cmd + ctrl - y : yabai -m space --mirror y-axis # flip along y-axis
 cmd + ctrl - x : yabai -m space --mirror x-axis # flip along x-axis
+
+# Move windows (between displays)
+cmd + ctrl - 1 : yabai -m window --display 1
+cmd + ctrl - 2 : yabai -m window --display 2
+cmd + ctrl - 3 : yabai -m window --display 3
+
+# Move windows (between spaces)
+

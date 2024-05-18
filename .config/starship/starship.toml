@@ -35,8 +35,8 @@ $terraform\
 #-- SECTIONS --#
 
 [character]
-success_symbol = '[ ](bold #94E2D5)' # teal
-error_symbol = '[ ](bold #F38BA8)'   # red
+success_symbol = '[ 󱞩](bold #cba6f7)' # teal
+error_symbol = '[ 󱞩](bold #F38BA8)'   # red
 
 [username]
 # bg: Red | fg: Base

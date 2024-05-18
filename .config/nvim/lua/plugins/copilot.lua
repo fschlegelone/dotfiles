@@ -1,4 +1,5 @@
 return {
-	"github/copilot.vim",
-	tag = "v1.30.0",
+  "github/copilot.vim",
+  event = { "BufReadPre", "BufNewFile" }, -- lazy load when entering new or opened buffers
+  tag = "v1.30.0",
 }

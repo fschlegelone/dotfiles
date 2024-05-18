@@ -1,4 +1,7 @@
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = [
+  "~/.config/alacritty/onetheme_alacritty.toml",
+  "~/.config/alacritty/styling.toml",
+]
 
 [env]
 TERM = "xterm-256color"
@@ -19,7 +22,7 @@ title = "TERMINAL"
 
 [font]
 normal = { family = "IosevkaTerm Nerd Font Mono", style = "Bold" }
-size = 18
+size = 17
 
 [keyboard]
 bindings = []
